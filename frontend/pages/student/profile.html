@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Student Profile
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../assets/css/profile.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <h2>
+                    🎓 InternHub
+                </h2>
+
+            </div>
+
+            <button
+                onclick="window.location.href='dashboard.html'"
+            >
+                🏠 Dashboard
+            </button>
+
+            <button
+                onclick="window.location.href='applications.html'"
+            >
+                📄 My Applications
+            </button>
+
+            <button
+                class="active"
+            >
+                👤 Profile
+            </button>
+
+            <button
+                onclick="logout()"
+            >
+                🚪 Logout
+            </button>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="content">
+
+            <!-- PROFILE HEADER -->
+
+            <section class="profile-header">
+
+                <div class="profile-avatar">
+
+                    👨‍🎓
+
+                </div>
+
+                <div class="profile-info">
+
+                    <h1 id="studentName">
+                        Loading...
+                    </h1>
+
+                    <p id="studentEmail">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- PROFILE GRID -->
+
+            <div class="profile-grid">
+
+                <!-- LEFT -->
+
+                <section class="profile-card">
+
+                    <div class="section-title">
+
+                        <h2>
+                            ✨ Profile Information
+                        </h2>
+
+                    </div>
+
+                    <form id="profileForm">
+
+                        <div class="input-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter Name"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                College
+                            </label>
+
+                            <input
+                                type="text"
+                                id="college"
+                                placeholder="Enter College"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Skills
+                            </label>
+
+                            <input
+                                type="text"
+                                id="skills"
+                                placeholder="HTML, CSS, React"
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Resume URL
+                            </label>
+
+                            <input
+                                type="text"
+                                id="resume"
+                                placeholder="Resume Link"
+                            >
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="save-btn"
+                        >
+                            💾 Save Changes
+                        </button>
+
+                    </form>
+
+                </section>
+
+                <!-- RIGHT -->
+
+                <section class="stats-section">
+
+                    <div class="stats-card">
+
+                        <h3>
+                            📄 Applications
+                        </h3>
+
+                        <h1
+                            id="applicationCount"
+                        >
+                            0
+                        </h1>
+
+                    </div>
+
+                    <div class="stats-card">
+
+                        <h3>
+                            🏫 College
+                        </h3>
+
+                        <p
+                            id="collegePreview"
+                        >
+                            Not Added
+                        </p>
+
+                    </div>
+
+                    <div class="stats-card">
+
+                        <h3>
+                            🛠 Skills
+                        </h3>
+
+                        <p
+                            id="skillsPreview"
+                        >
+                            Not Added
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../../assets/js/profile.js"></script>
+
+</body>
+
+</html>

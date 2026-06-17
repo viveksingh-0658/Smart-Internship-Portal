@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Dashboard</title>
+
+  <link rel="stylesheet" href="../../assets/css/company-dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>🏢 Company Panel</h2>
+    </div>
+
+    <button onclick="showSection('createSection')">
+      ➕ Create Internship
+    </button>
+
+    <button onclick="showSection('internshipsSection')">
+      📋 My Internships
+    </button>
+
+    <button onclick="window.location.href='applicants.html'">
+      👨‍🎓 Applicants
+    </button>
+
+    <button onclick="showSection('profileSection')">
+      🏢 Company Profile
+    </button>
+
+    <button onclick="logout()">
+      🚪 Logout
+    </button>
+
+  </aside>
+
+  <!-- Main Content -->
+
+  <main class="content">
+
+    <!-- Hero Banner -->
+
+    <div class="welcome-banner">
+
+      <div class="hero-image"></div>
+
+      <h1>
+        Welcome Back 🤗
+      </h1>
+
+      <p>
+        Create internships, manage applicants and grow your company faster.
+      </p>
+
+      <div class="stats-container">
+
+        <div class="stat-card">
+          <h3 id="totalInternships">0</h3>
+          <p>Total Internships</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 id="totalApplicants">0</h3>
+          <p>Total Applicants</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 id="acceptedCount">0</h3>
+          <p>Accepted</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 id="rejectedCount">0</h3>
+          <p>Rejected</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Create Internship -->
+
+    <section id="createSection">
+
+      <h2>Create Internship</h2>
+
+      <form id="internshipForm">
+
+        <input
+          type="text"
+          id="title"
+          placeholder="Internship Title"
+          required
+        >
+
+        <input
+          type="text"
+          id="location"
+          placeholder="Location"
+          required
+        >
+
+        <div class="two-columns">
+
+          <input
+            type="text"
+            id="stipend"
+            placeholder="Stipend"
+          >
+
+          <input
+            type="text"
+            id="duration"
+            placeholder="Duration"
+          >
+
+        </div>
+
+        <input
+          type="text"
+          id="skillsRequired"
+          placeholder="React, Node, MongoDB, Express"
+        >
+
+        <textarea
+          id="description"
+          rows="5"
+          placeholder="Internship Description"
+        ></textarea>
+
+        <button type="submit">
+          🧗🏻‍♀️ Create Internship
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- My Internships -->
+
+    <section
+      id="internshipsSection"
+      style="display:none;"
+    >
+
+      <h2>My Internships</h2>
+
+      <div id="internships"></div>
+
+    </section>
+    <!-- Edit Internship -->
+
+<!-- Edit Internship -->
+
+<section
+  id="editSection"
+  style="display:none;"
+>
+
+  <div class="edit-card">
+
+    <h2 class="edit-heading">
+      ✏️ Edit Internship
+    </h2>
+
+    <p class="edit-subtitle">
+      Update the details of your internship below
+    </p>
+
+    <form id="editInternshipForm">
+
+      <input
+        type="hidden"
+        id="editId"
+      >
+
+      <div class="two-columns">
+
+        <div class="form-group">
+          <label>
+            Internship Title
+          </label>
+
+          <input
+            type="text"
+            id="editTitle"
+            placeholder="Enter Internship Title"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            Location
+          </label>
+
+          <input
+            type="text"
+            id="editLocation"
+            placeholder="Enter Location"
+            required
+          >
+        </div>
+
+      </div>
+
+      <div class="two-columns">
+
+        <div class="form-group">
+          <label>
+            Stipend
+          </label>
+
+          <input
+            type="text"
+            id="editStipend"
+            placeholder="₹ 10000"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            Duration
+          </label>
+
+          <input
+            type="text"
+            id="editDuration"
+            placeholder="6 Months"
+          >
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+          Skills Required
+        </label>
+
+        <input
+          type="text"
+          id="editSkillsRequired"
+          placeholder="React, Node, MongoDB, Express"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label>
+          Internship Description
+        </label>
+
+        <textarea
+          id="editDescription"
+          rows="6"
+          placeholder="Describe the internship..."
+        ></textarea>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          type="submit"
+          class="save-btn"
+        >
+          💾 Update Internship
+        </button>
+
+        <button
+          type="button"
+          class="cancel-btn"
+          onclick="showSection('internshipsSection')"
+        >
+          ❌ Cancel
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+    <!-- Company Profile -->
+
+    <section
+      id="profileSection"
+      style="display:none;"
+    >
+
+      <h2>Company Profile</h2>
+
+      <div class="profile-card">
+
+        <h3>
+          🏢 Company Information
+        </h3>
+
+        <p>
+          <strong>Company Name:</strong>
+          <span id="companyName">
+            Not Loaded
+          </span>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <span id="companyEmail">
+            Not Loaded
+          </span>
+        </p>
+
+        <p>
+          <strong>Industry:</strong>
+          <span id="companyIndustry">
+            Not Loaded
+          </span>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <span style="color:green;">
+            Active
+          </span>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="../../assets/js/company.js"></script>
+
+</body>
+
+</html>

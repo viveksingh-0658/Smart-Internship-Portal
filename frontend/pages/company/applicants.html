@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<title>Applicants</title>
+
+<link rel="stylesheet"
+      href="../../assets/css/company-dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+
+<div class="logo">
+  <h2>🏢 Company Panel</h2>
+</div>
+
+<button
+  onclick="window.location.href='dashboard.html'"
+>
+  🏠 Dashboard
+</button>
+
+<button
+  onclick="location.reload()"
+>
+  🔄 Refresh
+</button>
+
+
+  </aside>
+
+  <main class="content">
+
+
+<div class="hero">
+  <h1>
+    👨‍🎓 Internship Applicants
+  </h1>
+
+  <p>
+    View, Accept and Reject Student Applications
+  </p>
+
+</div>
+
+<section>
+
+  <h2>
+    Applicants List
+  </h2>
+
+  <div
+    id="applicantsContainer"
+    class="applicants-grid"
+  >
+
+    <h3>
+      Loading Applicants...
+    </h3>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+</div>
+
+<script src="../../assets/js/applicants.js"></script>
+</body>
+
+</html>

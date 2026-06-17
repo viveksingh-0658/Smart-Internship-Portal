@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Register</title>
+
+  <link rel="stylesheet" href="../../assets/css/auth.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Student Registration</h1>
+
+  <form id="registerForm">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Full Name"
+      required
+    >
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email"
+      required
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      required
+    >
+
+    <input
+      type="text"
+      id="college"
+      placeholder="College Name"
+      required
+    >
+
+    <input
+      type="text"
+      id="skills"
+      placeholder="Skills (React, Node, Java)"
+    >
+
+    <button type="submit">
+      Register
+    </button>
+
+  </form>
+
+  <p id="message"></p>
+
+  <p>
+    Already have an account?
+    <a href="login.html">Login</a>
+  </p>
+
+</div>
+
+<script src="../../assets/js/config.js"></script>
+<script src="../../assets/js/api.js"></script>
+<script src="../../assets/js/auth.js"></script>
+
+</body>
+</html>

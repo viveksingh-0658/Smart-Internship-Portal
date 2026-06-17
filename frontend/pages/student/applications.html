@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Applications
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../assets/css/applications.css"
+    >
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>
+                🎓 InternHub
+            </h2>
+
+        </div>
+
+        <button
+            onclick="window.location.href='dashboard.html'"
+        >
+            🏠 Dashboard
+        </button>
+
+        <button>
+            📄 My Applications
+        </button>
+
+        <button
+            onclick="window.location.href='profile.html'"
+        >
+            👤 Profile
+        </button>
+
+        <button
+            onclick="logout()"
+        >
+            🚪 Logout
+        </button>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <div class="hero">
+
+            <h1>
+                📄 My Applications
+            </h1>
+
+            <p>
+                Track all internship applications in one place
+            </p>
+
+        </div>
+
+        <div
+            id="applicationsContainer"
+            class="applications-grid"
+        >
+
+            <h2>
+                Loading Applications...
+            </h2>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../../assets/js/applications.js"></script>
+
+</body>
+
+</html>

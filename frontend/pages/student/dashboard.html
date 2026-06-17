@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    InternHub Student Dashboard
+</title>
+
+<link rel="stylesheet"
+      href="../../assets/css/dashboard.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>
+            🎓 InternHub
+        </h2>
+
+        <span>
+            Student Portal
+        </span>
+
+    </div>
+
+    <nav class="menu">
+
+        <button onclick="showDashboard()">
+            🏠 Dashboard
+        </button>
+
+        <button onclick="window.location.href='applications.html'">
+            📄 My Applications
+        </button>
+
+        <button onclick="showProfile()">
+            👤 Profile
+        </button>
+
+        <button onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="content">
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+
+                🗒️ Premium Internship Portal
+
+            </div>
+
+            <h1>
+
+                Build Your Career With
+                Top Companies
+
+            </h1>
+
+            <p>
+
+                Discover internships, apply faster,
+                track applications and start your
+                professional journey with leading
+                organizations.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+
+                    Explore Internships
+
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    onclick="window.location.href='applications.html'"
+                >
+
+                    View Applications
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS SECTION -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📚
+            </div>
+
+            <h2 id="totalInternships">
+                0
+            </h2>
+
+            <p>
+                Total Internships
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📄
+            </div>
+
+            <h2 id="appliedCount">
+                0
+            </h2>
+
+            <p>
+                Applied
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ✅
+            </div>
+
+            <h2 id="acceptedCount">
+                0
+            </h2>
+
+            <p>
+                Accepted
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ❌
+            </div>
+
+            <h2 id="rejectedCount">
+                0
+            </h2>
+
+            <p>
+                Rejected
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FILTERS -->
+
+    <section class="filter-wrapper">
+
+        <div class="filters">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search Internship..."
+                onkeyup="filterInternships()"
+            >
+
+            <select
+                id="locationFilter"
+                onchange="filterInternships()"
+            >
+
+                <option value="">
+                    All Locations
+                </option>
+
+                <option value="Remote">
+                    Remote
+                </option>
+
+                <option value="Delhi">
+                    Delhi
+                </option>
+
+                <option value="Mumbai">
+                    Mumbai
+                </option>
+
+            </select>
+
+            <select
+                id="sortFilter"
+                onchange="filterInternships()"
+            >
+
+                <option value="">
+                    Sort By
+                </option>
+
+                <option value="high">
+                    Highest Stipend
+                </option>
+
+                <option value="low">
+                    Lowest Stipend
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+    <!-- INTERNSHIPS SECTION -->
+
+    <section class="internship-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    🧗 Available Internships
+                </h2>
+
+                <p>
+                    Find opportunities from
+                    top companies.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div
+            id="internships"
+            class="internship-grid"
+        >
+
+            <!-- Dynamic Cards From student.js -->
+
+        </div>
+
+    </section>
+
+</main>
+```
+
+</div>
+
+<script src="../../assets/js/student.js"></script>
+
+</body>
+
+</html>

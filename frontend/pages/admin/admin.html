@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Admin Dashboard
+</title>
+
+<link
+    rel="stylesheet"
+    href="../../assets/css/admin.css"
+>
+```
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+```
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>
+            ⚙️ Admin Panel
+        </h2>
+
+    </div>
+
+    <button onclick="showSection('dashboardSection')">
+        📊 Dashboard
+    </button>
+
+    <button onclick="showSection('studentsSection')">
+        👨‍🎓 Students
+    </button>
+
+    <button onclick="showSection('companiesSection')">
+        🏢 Companies
+    </button>
+
+    <button onclick="showSection('internshipsSection')">
+        💼 Internships
+    </button>
+
+    <button onclick="showSection('applicationsSection')">
+        📄 Applications
+    </button>
+
+    <button onclick="logout()">
+        🚪 Logout
+    </button>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="content">
+
+    <!-- HERO -->
+
+    <section id="dashboardSection">
+
+        <div class="hero">
+
+            <h1>
+                Admin Dashboard 🚀
+            </h1>
+
+            <p>
+                Manage Students, Companies, Internships and Applications
+            </p>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h2 id="studentsCount">
+                    0
+                </h2>
+
+                <p>
+                    Students
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="companiesCount">
+                    0
+                </h2>
+
+                <p>
+                    Companies
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="internshipsCount">
+                    0
+                </h2>
+
+                <p>
+                    Internships
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="applicationsCount">
+                    0
+                </h2>
+
+                <p>
+                    Applications
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH + FILTER -->
+
+    <div class="top-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search Students, Companies, Internships..."
+        >
+
+        <select id="filterType">
+
+            <option value="all">
+                All
+            </option>
+
+            <option value="student">
+                Students
+            </option>
+
+            <option value="company">
+                Companies
+            </option>
+
+            <option value="internship">
+                Internships
+            </option>
+
+            <option value="application">
+                Applications
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- STUDENTS -->
+
+    <section
+        id="studentsSection"
+        style="display:none;"
+    >
+
+        <h2>
+            👨‍🎓 Students
+        </h2>
+
+        <div id="studentsContainer"></div>
+
+    </section>
+
+    <!-- COMPANIES -->
+
+    <section
+        id="companiesSection"
+        style="display:none;"
+    >
+
+        <h2>
+            🏢 Companies
+        </h2>
+
+        <div id="companiesContainer"></div>
+
+    </section>
+
+    <!-- INTERNSHIPS -->
+
+    <section
+        id="internshipsSection"
+        style="display:none;"
+    >
+
+        <h2>
+            💼 Internships
+        </h2>
+
+        <div id="internshipsContainer"></div>
+
+    </section>
+
+    <!-- APPLICATIONS -->
+
+    <section
+        id="applicationsSection"
+        style="display:none;"
+    >
+
+        <h2>
+            📄 Applications
+        </h2>
+
+        <div id="applicationsContainer"></div>
+
+    </section>
+
+</main>
+```
+
+</div>
+
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+
+</html>

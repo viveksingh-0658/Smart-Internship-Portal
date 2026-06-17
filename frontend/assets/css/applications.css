@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+
+    color:white;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:280px;
+
+    background:#020617;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    height:100vh;
+
+    padding:30px 20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo h2{
+    color:#60a5fa;
+    font-size:32px;
+}
+
+.sidebar button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+/* CONTENT */
+
+.content{
+    margin-left:280px;
+    width:calc(100% - 280px);
+    padding:35px;
+}
+
+/* HERO */
+
+.hero{
+
+    background:
+    rgba(255,255,255,.08);
+
+    padding:50px;
+
+    border-radius:25px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+/* GRID */
+
+.applicants-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+}
+/* CARD */
+
+.application-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    padding:25px;
+
+    border-radius:24px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.application-card h2{
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+}
+
+.application-card p{
+
+    margin:10px 0;
+
+    color:#e2e8f0;
+}
+
+/* STATUS */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+}
+
+.accepted{
+    background:#10b981;
+}
+
+.rejected{
+    background:#ef4444;
+}
+
+.pending{
+    background:#f59e0b;
+}
